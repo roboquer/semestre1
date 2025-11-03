@@ -1,3 +1,9 @@
+/*
+Nombre del programa:calificacion con vector y matriz.
+Elaboro:Favian Orduña Suárez                      No. lista:18
+Fecha:03/11/2025                                  No. version:1
+Descripcion:Calificacione de un salon
+*/
 #include<stdio.h>
 main()
 {
@@ -33,4 +39,3 @@ main()
         printf("Ingrese una cantidad de alumnos valida");
     }
 }
-
