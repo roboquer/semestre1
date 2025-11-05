@@ -7,7 +7,7 @@ Descripcion:Calificacione de un salon
 #include<stdio.h>
 main()
 {
-    int i,j,n,k;
+    int i,j,n,k,S=0;
     printf("Ingrese cantidad de alumnos: ");
     scanf("%i",&n);
     if(n>0 && n<=30){
@@ -18,27 +18,28 @@ main()
                 P[i][j]=0;
             }
         }
-        for(i=0;i<n;i++){
-            for(k=0;k<4;k++){
-                for(j=0;j<4;j++){
+        for(i=0;i<n;i++){ //alumno
+            for(k=0;k<4;k++){ //parcial
+                for(j=0;j<4;j++){ //calificacion
                     do{
                         printf("Ingrese calificacion %i del parcial %i del alumno %i: ",j+1,k+1,i+1);
-                        scanf("%i",&C[i][j][k]);
-                        if(C[i][j][k]>=0 && C[i][j][k]<=100){
-                            P[i][k]=P[i][k]+C[i][j][k];
+                        scanf("%i",&C[k][i][j]);
+                        if(C[k][i][j]>=0 && C[k][i][j]<=100){
+                            S=S+C[k][i][j];
                             if(j==3){
-                                P[i][k]=P[i][k]/4;
+                                P[i][k]=S/4;
+                                S=0;
                             }
                         }else{
                             printf("Ingrese una calificacion valida 0-100\n");
                         }
-                    }while(C[i][j][k]>100 || C[i][j][k]<0);
+                    }while(C[k][i][j]>100 || C[k][i][j]<0);
                 }
             }
-            for(i=0;i<n;i++){
-                for(k=0;k<4;k++){
-                    printf("\nPromedio del alumno %i parcial %i: %.2f",i+1,k+1,P[i][k]);
-                }
+        }
+        for(i=0;i<n;i++){
+            for(k=0;k<4;k++){
+                printf("\nPromedio del alumno %i parcial %i: %.2f",i+1,k+1,P[i][k]);
             }
         }
     }else{
