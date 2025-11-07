@@ -32,7 +32,7 @@ main (){
             printf("Matriz 2:\n");
             for(i=0;i<fil2;i++){
                 for(j=0;j<colum2;j++){
-                    M2[i][j]=(rand() % 101)-10;
+                    M2[i][j]=(rand() % 21)-10;
                     printf("%i  ",M2[i][j]);
                 }
                 printf("\n");
@@ -54,5 +54,4 @@ main (){
     }else{
         printf("El maximo de multiplicacion son de matrices 10X10");
     }
-    
 }

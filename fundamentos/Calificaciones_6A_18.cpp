@@ -7,10 +7,10 @@ Descripcion:Calificaciones de un salon
 #include<stdio.h>
 main()
 {
-    int c,i,j,n,k,S=0;
+    int opc,i,j,n,k,S=0;
     printf("Ingresa que opcion quiere\n1.- Calificacion de un solo parcial\n2.- Calificacion de 4 parciales");
-    scanf("%i",&c);
-    switch (c)
+    scanf("%i",&opc);
+    switch (opc)
     {
     case 1:
         printf("Ingrese cantidad de alumnos: ");
