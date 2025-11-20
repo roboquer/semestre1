@@ -19,7 +19,7 @@ main()
     int n,k,i=0,j=0,v1=1,v2=1,v3=1,v4=1;
     printf("Ingresa de que tamaño quieres la matriz cuadrada 1-15: ");
     scanf("%i",&n);
-    if(n>0 || n<16){
+    if(n>0 && n<16){
         int M[n][n];
         for(i=0;i<n;i++){
             for(j=0;j<n;j++){
