@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<math.h>
 float r;
 void Pa();
 void Pb(float a, float h);
@@ -7,7 +8,7 @@ main(){
     int opc;
     float a,h;
     printf("Ingresa que quiere realizar:\n1.- Valor de la hipotenusa\n2.- Area del triangulo\n3.- Valor del tercer angulo\n");
-    scanf("%f",&opc);
+    scanf("%i",&opc);
     switch (opc){
         case 1:
             Pa();
@@ -28,11 +29,11 @@ main(){
 }
 void Pa(){
     float a,b;
-    printf("Cateto a (el vertical): ");
+    printf("Cateto a: ");
     scanf("%f",&a);
-    printf("Cateto b (el horizontal): ");
+    printf("Cateto b: ");
     scanf("%f",&b);
-    r=a/b;
+    r=sqrt(pow(a,2)+pow(b,2));
     printf("Hipotenusa: %.2f",r);
 }
 void Pb(float a,float h){
